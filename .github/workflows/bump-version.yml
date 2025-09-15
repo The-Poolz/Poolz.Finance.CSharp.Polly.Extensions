@@ -1,0 +1,12 @@
+name: Bump version
+on:
+  issues:
+    types: [opened, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  bump-version:
+    uses: The-Poolz/.net-workflows/.github/workflows/bump-version.yml@v1.0.3

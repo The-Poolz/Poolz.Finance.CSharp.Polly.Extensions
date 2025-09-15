@@ -1,0 +1,9 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+    build-and-test:
+        uses: The-Poolz/.net-workflows/.github/workflows/publish.yml@v1.0.4

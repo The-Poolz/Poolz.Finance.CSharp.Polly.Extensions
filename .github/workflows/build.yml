@@ -1,0 +1,11 @@
+name: .NET build and test
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+    build-and-test:
+        uses: The-Poolz/.net-workflows/.github/workflows/build.yml@v1.0.3
