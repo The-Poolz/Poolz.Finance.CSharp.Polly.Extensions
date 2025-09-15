@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EAB487D3-2E1F-4B43-93D0-11F4BFE9EFD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poolz.Finance.CSharp.Polly.Extensions", "src\Poolz.Finance.CSharp.Polly.Extensions\Poolz.Finance.CSharp.Polly.Extensions.csproj", "{31E7B52F-D6B5-CB5D-D357-1DBE55BC8A84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poolz.Finance.CSharp.Polly.Extensions.Tests", "tests\Poolz.Finance.CSharp.Polly.Extensions.Tests\Poolz.Finance.CSharp.Polly.Extensions.Tests.csproj", "{C87664DF-C92A-46ED-AD50-46DEC7F16B20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31E7B52F-D6B5-CB5D-D357-1DBE55BC8A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E7B52F-D6B5-CB5D-D357-1DBE55BC8A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E7B52F-D6B5-CB5D-D357-1DBE55BC8A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E7B52F-D6B5-CB5D-D357-1DBE55BC8A84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C87664DF-C92A-46ED-AD50-46DEC7F16B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C87664DF-C92A-46ED-AD50-46DEC7F16B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C87664DF-C92A-46ED-AD50-46DEC7F16B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C87664DF-C92A-46ED-AD50-46DEC7F16B20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{31E7B52F-D6B5-CB5D-D357-1DBE55BC8A84} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C87664DF-C92A-46ED-AD50-46DEC7F16B20} = {EAB487D3-2E1F-4B43-93D0-11F4BFE9EFD3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0877C78B-7BCB-44E1-96F8-48BF054EFDF7}
+	EndGlobalSection
+EndGlobal
