@@ -13,7 +13,7 @@ namespace Poolz.Finance.CSharp.Polly.Extensions
             BackoffType = DelayBackoffType.Constant;
             UseJitter = false;
             Delay = TimeSpan.FromMilliseconds(250);
-            ShouldHandle = new PredicateBuilder<TResult>().Handle<Exception>(_ => true);
+            ShouldHandle = new PredicateBuilder<TResult>().Handle<Exception>(exception => !(exception is OperationCanceledException));
         }
     }
 }
