@@ -8,20 +8,24 @@ namespace Poolz.Finance.CSharp.Polly.Extensions
 {
     public class RetryExecutor : IRetryExecutor
     {
-        public TResult Execute<TResult>(Func<CancellationToken, Task<TResult>> action, RetryStrategyOptions<TResult>? options = null, CancellationToken ct = default)
+        public TResult Execute<TResult>(Func<CancellationToken, TResult> action, RetryStrategyOptions<TResult>? options = null, CancellationToken ct = default)
         {
-            return ExecuteAsync(action, options, ct).GetAwaiter().GetResult();
+            var pipeline = CreatePipeline(options);
+            return pipeline.Execute(action, ct);
         }
 
         public async Task<TResult> ExecuteAsync<TResult>(Func<CancellationToken, Task<TResult>> action, RetryStrategyOptions<TResult>? options = null, CancellationToken ct = default)
         {
-            options ??= new DefaultRetryStrategyOptions<TResult>();
+            var pipeline = CreatePipeline(options);
+            return await pipeline.ExecuteAsync(token => new ValueTask<TResult>(action(token)), ct).ConfigureAwait(false);
+        }
 
-            var pipeline = new ResiliencePipelineBuilder<TResult>()
+        private static ResiliencePipeline<TResult> CreatePipeline<TResult>(RetryStrategyOptions<TResult>? options)
+        {
+            options ??= new DefaultRetryStrategyOptions<TResult>();
+            return new ResiliencePipelineBuilder<TResult>()
                 .AddRetry(options)
                 .Build();
-
-            return await pipeline.ExecuteAsync(token => new ValueTask<TResult>(action(token)), ct);
         }
     }
 }

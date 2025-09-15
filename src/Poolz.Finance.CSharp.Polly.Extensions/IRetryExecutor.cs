@@ -7,7 +7,7 @@ namespace Poolz.Finance.CSharp.Polly.Extensions
 {
     public interface IRetryExecutor
     {
-        public TResult Execute<TResult>(Func<CancellationToken, Task<TResult>> action, RetryStrategyOptions<TResult>? options = null, CancellationToken ct = default);
+        public TResult Execute<TResult>(Func<CancellationToken, TResult> action, RetryStrategyOptions<TResult>? options = null, CancellationToken ct = default);
         public Task<TResult> ExecuteAsync<TResult>(Func<CancellationToken, Task<TResult>> action, RetryStrategyOptions<TResult>? options = null, CancellationToken ct = default);
     }
 }
