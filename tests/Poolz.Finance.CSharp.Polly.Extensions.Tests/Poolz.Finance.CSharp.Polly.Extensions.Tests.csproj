@@ -24,4 +24,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Poolz.Finance.CSharp.Polly.Extensions\Poolz.Finance.CSharp.Polly.Extensions.csproj" />
+  </ItemGroup>
+
 </Project>
