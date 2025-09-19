@@ -6,4 +6,4 @@ on:
 
 jobs:
     build-and-test:
-        uses: The-Poolz/.net-workflows/.github/workflows/publish.yml@v1.0.4
+        uses: The-Poolz/.net-workflows/.github/workflows/publish.yml@v1.0.5
