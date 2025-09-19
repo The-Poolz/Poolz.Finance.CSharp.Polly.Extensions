@@ -8,4 +8,4 @@ on:
 
 jobs:
     build-and-test:
-        uses: The-Poolz/.net-workflows/.github/workflows/build.yml@v1.0.3
+        uses: The-Poolz/.net-workflows/.github/workflows/build-and-test.yml@v1.0.6
